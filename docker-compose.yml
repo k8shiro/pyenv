@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pyenv:
+    build:
+      context: ./
+      args:
+        PYTHON_VER: 3.6
+    volumes:
+            - ./src:/src
+    command: ping 172.0.0.1
